@@ -1,7 +1,13 @@
 from setuptools import setup
 from querycount import __version__
 
-url = "https://github.com/kaajavi/django-showmequeries/tarball/{0}".format(__version__)
+tarball_url = "https://github.com/kaajavi/django-showmequeries/tarball/{0}".format(__version__)
+url = "https://github.com/kaajavi/django-showmequeries"
+
+from pathlib import Path
+
+here = Path(__file__).parent
+long_description = (here / "README.rst").read_text()
 
 setup(
     name="django-showmequeries",
@@ -11,14 +17,15 @@ setup(
     author_email="kaajavi@gmail.com",
     description=("Middleware that Prints statics of DB queries to the runserver console."),
     install_requires=[],
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    url=url,
     license="MIT",
     keywords="django querycount queries database performance",
-    url=url,
     packages=[
         "querycount",
     ],
-    long_description="this project gives you a middleware that"
-    "prints statics of DB queries to the runserver console.",
+
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
