@@ -9,6 +9,7 @@ This project is a fork from `django-querycount <https://github.com/bradmontgomer
 gives you a middleware that prints statics of DB query in Django's runserver
 console output.
 
+|screenshot_old|
 
 |screenshot|
 
@@ -127,4 +128,7 @@ to have your work included. Be sure to add yourself to ``AUTHORS.rst``.
     :target: https://pypi.python.org/pypi/django-querycount/
 
 .. |screenshot| image:: screenshot.png
+    :alt: django-showmequeries in action
+
+.. |screenshot_old| image:: screenshot_old.png
     :alt: django-querycount in action
