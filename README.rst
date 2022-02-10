@@ -41,6 +41,7 @@ that will be ignored by the middleware.  The default settings are::
         'IGNORE_SQL_PATTERNS': [],
         'DISPLAY_DUPLICATES': None,
         'RESPONSE_HEADER': 'X-DjangoQueryCount-Count'
+        'MAX_TIME_TO_CHECK_SLOWER': 0.1,
     }
 
 
@@ -74,7 +75,7 @@ the supply ``None`` as the value::
         'RESPONSE_HEADER': None
     }
 
-**New in 0.4.0**. The ``QUERYCOUNT['DISPLAY_DUPLICATES']`` setting allows you
+The ``QUERYCOUNT['DISPLAY_DUPLICATES']`` setting allows you
 to control how the most common duplicate queries are displayed. If the setting
 is ``None`` (the default), duplicate queries are not displayed. Otherwise, this
 should be an integer. For example, the following setting would always print the
@@ -82,6 +83,15 @@ should be an integer. For example, the following setting would always print the
 
     QUERYCOUNT = {
         'DISPLAY_DUPLICATES': 5,
+    }
+
+
+The ``QUERYCOUNT['MAX_TIME_TO_CHECK_SLOWER']`` setting allows you
+to control what is a slower query. For example, the following setting would print the slower query,
+if the query is slower than 50ms::
+
+    QUERYCOUNT = {
+        'MAX_TIME_TO_CHECK_SLOWER': 0.05,
     }
 
 
