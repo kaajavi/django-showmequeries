@@ -1,5 +1,5 @@
 Django ShowMeQueries
-=================
+====================
 
 |version| |license|
 
