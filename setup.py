@@ -15,7 +15,7 @@ setup(
     keywords="django querycount queries database performance",
     url=url,
     packages=[
-        "quericount",
+        "querycount",
     ],
     long_description="this project gives you a middleware that"
     "prints statics of DB queries to the runserver console.",
