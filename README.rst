@@ -3,7 +3,7 @@ Django ShowMeQueries
 
 |version| |license|
 
-Maintained by `Platzi Team <https://platzi.com`_
+Maintained by `Platzi Team <https://platzi.com>`_
 
 This project is a fork from `django-querycount <https://github.com/bradmontgomery/django-querycount>`_, this project
 gives you a middleware that prints statics of DB query in Django's runserver

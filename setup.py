@@ -18,7 +18,7 @@ setup(
     description=("Middleware that Prints statics of DB queries to the runserver console."),
     install_requires=[],
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type='text/x-rst',
     url=url,
     license="MIT",
     keywords="django querycount queries database performance",
