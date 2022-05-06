@@ -31,7 +31,7 @@ class ShowMeQueriesMiddleware(MiddlewareMixin):
 
     def __init__(self, *args, **kwargs):
         # Call super first, so the MiddlewareMixin's __init__ does its thing.
-        super(QueryCountMiddleware, self).__init__(*args, **kwargs)
+        super(ShowMeQueriesMiddleware, self).__init__(*args, **kwargs)
 
         if settings.DEBUG:
             self.request_path = None

@@ -1,5 +1,5 @@
 from django.test import TestCase, modify_settings, override_settings
-from querycount.middleware import QueryCountMiddleware
+from querycount.middleware import ShowMeQueriesMiddleware
 
 
 DEFAULT_QC_SETTINGS = {
@@ -16,7 +16,7 @@ DEFAULT_QC_SETTINGS = {
 }
 
 QC_MIDDLEWARE = {
-    'append': 'querycount.middleware.QueryCountMiddleware',
+    'append': 'querycount.middleware.ShowMeQueriesMiddleware',
 }
 
 
@@ -35,11 +35,11 @@ class QueryCountTestCase(TestCase):
     #     through the hoops of having a `test app` (that then needs to be
     #     monkey-patched in)
     #   - Should we just write a dump unit test for each of the
-    #     QueryCountMiddleware's methods (probably).
+    #     ShowMeQueriesMiddleware's methods (probably).
     # -------------------------------------------------------------------------
 
     def setUp(self):
-        self.querycount = QueryCountMiddleware()
+        self.querycount = ShowMeQueriesMiddleware()
 
     def test_empty(self):
         # Smoke test for a view that does no DB queries.

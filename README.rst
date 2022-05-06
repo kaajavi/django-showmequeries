@@ -19,7 +19,7 @@ Installation
 
     pip install django-showmequeries
 
-Just add ``querycount.middleware.QueryCountMiddleware`` to your
+Just add ``querycount.middleware.ShowMeQueriesMiddleware`` to your
 ``MIDDLEWARE``.
 
 Notice that django-showmequeries is hard coded to work only in DEBUG mode set to true
@@ -41,7 +41,7 @@ that will be ignored by the middleware.  The default settings are::
         'IGNORE_REQUEST_PATTERNS': [],
         'IGNORE_SQL_PATTERNS': [],
         'DISPLAY_DUPLICATES': None,
-        'RESPONSE_HEADER': 'X-DjangoQueryCount-Count'
+        'RESPONSE_HEADER': 'X-DjangoQueryCount-Count',
         'MAX_TIME_TO_CHECK_SLOWER': 0.1,
     }
 
